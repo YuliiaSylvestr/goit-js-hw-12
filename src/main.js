@@ -79,6 +79,7 @@ refs.form.addEventListener('submit', async e => {
   try {
     page = 1;
     searchValue = refs.searchInput.value;
+    e.currentTarget.reset();
     const { data } = await axios.get(
       `https://pixabay.com/api/?key=42081820-380f934f7feb19076f66ce532&q=${encodeURI(
         searchValue
